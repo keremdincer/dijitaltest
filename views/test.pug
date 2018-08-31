@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= test.name
+  p= test.description
+  each section in test.sections
+    div.section
+      h3= section.name
+      p= section.description
+      each question in section.questions
+        p.question= question.text
+        each answer in question.answers
+          p.answer= answer.text
